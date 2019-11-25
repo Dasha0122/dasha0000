@@ -35,8 +35,8 @@ void main()
       a[i][h] = 0;
     min = 100;
   }
- //for (int k = 0; k < n - 1; k++)
- //   cout << rez[k];
+ //for (int l= 0; l < n - 1; l++)
+ //   cout << rez[l];
 
 
 
