@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void main()
+{
+  int n = 8, i, j, st = 0;
+  int a[8][8];
+  int rez[8 - 1];
+
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < n; j++)
+      cin >> a[i][j];
+  }
+  int min = 10;
+  cout << "nachalnyu dom";
+  int h;
+  cin >> h;
+  for (int i = 0; i < n; i++)
+    a[i][h] = 0;
+  for (int d = 0;d < n - 1; d++)
+  {
+    for (int j = 0; j < n; j++)
+    {
+      if (a[h][j] < min && a[h][j] != 0)
+      {
+        min = a[h][j];
+        st = j;
+      }
+    }
+    rez[d] = st;
+    h = st;
+    for (int i = 0; i < n; i++)
+      a[i][h] = 0;
+    min = 10;
+  }
+ //for (int k = 0; k < n - 1; k++)
+ //   cout << rez[k];
+
+
+
+}
